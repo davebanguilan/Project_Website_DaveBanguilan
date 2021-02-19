@@ -13,13 +13,13 @@ const Hero = () => {
         <Container className={classes.hero}>
             <Grid container spacing={3} justify="center" alignItems="center">
                 <Grid item xs={12} sm={8} justify="center">
-                    <Typography variant="h5">
-                        <span variant="h5" className={classes.primaryColor}>Hey there,</span> I'm Dave Banguilan
+                    <Typography variant="h4">
+                        <span variant="h4" className={classes.primaryColor}>Hey there,</span> I'm Dave Banguilan
                     </Typography>
-                    <Typography className={classes.textColor} variant="h3">
+                    <Typography className={classes.textColor} variant="h2">
                         Software Developer
                     </Typography>
-                    <Typography className={classes.gray} variant="h6">
+                    <Typography className={classes.gray} variant="h5">
                         5th year student 🎓 | Night Owl 🌃
                     </Typography>
                     <div className={classes.buttonGroup}>

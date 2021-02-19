@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     },
   },
   hero: {
-    marginTop: "80px",
+    margin: "80px 0",
     flexGrow: 1,
   },
   primaryColor: {
