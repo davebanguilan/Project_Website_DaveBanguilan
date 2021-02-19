@@ -30,8 +30,8 @@ const Skills = () => {
                 <Typography className={classes.textColor} variant="h5">Programming Languages / Frameworks</Typography>
             </Grid>
 
-            <Grid container className={classes.skill} spacing={3} justify="center" alignItems="center">
-                {skills.map((skill) => <Skill icon={skill.icon} title={skill.title} />)}
+            <Grid data-aos="fade-down" container className={classes.skill} spacing={3} justify="center" alignItems="center">
+                {skills.map((skill) => <Skill data-aos="fade-down" icon={skill.icon} title={skill.title} />)}
             </Grid>
         </Container>
     )
