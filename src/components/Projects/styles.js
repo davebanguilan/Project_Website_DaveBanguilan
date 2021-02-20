@@ -20,4 +20,8 @@ export default makeStyles((theme) => ({
     color: "#323232",
     fontWeight: 600,
   },
+  container: {
+    margin: "20px 0"
+  }
+
 }));

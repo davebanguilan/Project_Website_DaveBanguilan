@@ -10,8 +10,8 @@ import Me from '../../images/Me.jpg';
 const Hero = () => {
     const classes = useStyles();
     return (
-        <Container className={classes.hero}>
-            <Grid data-aos="fade-up" container spacing={3} justify="center" alignItems="center">
+        <Container data-aos="fade-up" className={classes.hero}>
+            <Grid container spacing={3} justify="center" alignItems="center">
                 <Grid data-aos="fade-right" item xs={12} sm={8} justify="center">
                     <Typography variant="h4">
                         <span variant="h4" className={classes.primaryColor}>Hey there,</span> I'm Dave Banguilan
