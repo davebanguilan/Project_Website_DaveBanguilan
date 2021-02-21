@@ -28,5 +28,5 @@ export default makeStyles((theme) => ({
   iconTitle: {
     margin: "0 5px",
     color: "#323232",
-  }
+  },
 }));
