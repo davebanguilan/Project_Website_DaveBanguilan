@@ -8,17 +8,19 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
 
+const initialState = {
+    name: "",
+    subject: "",
+    email: "",
+    message: ""
+};
+
 const Contact = () => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [apiError, setApiError] = useState(false);
-    const [formData, setFormData] = useState({
-        name: "",
-        subject: "",
-        email: "",
-        message: ""
-    });
+    const [formData, setFormData] = useState(initialState);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -46,12 +48,7 @@ const Contact = () => {
     };
 
     const clear = () => {
-        setFormData({
-            name: "",
-            subject: "",
-            email: "",
-            message: ""
-        });
+        setFormData(initialState);
     };
 
     return (

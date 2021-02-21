@@ -28,6 +28,9 @@ export default makeStyles((theme) => ({
     '&:hover': {
         color: "#19d3da",
         backgroundColor: "#FFFFFF"
+    },
+    "&:disabled": {
+      backgroundColor: "#AAAAAA"
     }
   },
   container: {
