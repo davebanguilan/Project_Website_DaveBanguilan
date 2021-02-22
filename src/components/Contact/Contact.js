@@ -25,7 +25,7 @@ const validationSchema = yup.object().shape({
     message: yup.string().min(8, "Your message is too short").required('Required')
   });
 
-const Contact = () => {
+const Contact = ({scrollDiv}) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -62,7 +62,7 @@ const Contact = () => {
 
     return (
         <>
-            <Container className={classes.contact}>
+            <Container ref={scrollDiv} className={classes.contact}>
                 <Grid container justify="center">
                     <Typography className={classes.primaryColor} variant="h4">Contact Me</Typography>
                 </Grid>
@@ -96,6 +96,6 @@ const Contact = () => {
             </Snackbar>
         </>
     )
-}
+};
 
-export default Contact
+export default Contact;

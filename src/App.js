@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, createRef} from 'react';
 import Hero from './components/Hero/Hero';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
@@ -15,7 +15,12 @@ const theme = createMuiTheme({
 });
 
 const App = () => {
-  
+  const scrollDiv = createRef();
+
+  const scrollToComponent = () => {
+    scrollDiv.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000
@@ -25,10 +30,10 @@ const App = () => {
     return (
         <MuiThemeProvider theme={theme}>
             <Container  maxWidth="md" >
-                <Hero />
+                <Hero scrollToComponent={scrollToComponent} />
                 <Skills />
                 <Projects />
-                <Contact />
+                <Contact scrollDiv={scrollDiv} />
             </Container>
         </MuiThemeProvider>
     )

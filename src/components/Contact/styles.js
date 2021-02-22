@@ -49,7 +49,7 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
   },
   button: {
-    margin: "8px",
+    marginTop: "8px",
   },
   requiredLabel: {
     color: "#f44336"

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import FileSaver from 'file-saver';
 import {Container, Button, Typography, Grid} from '@material-ui/core';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import GetAppOutlinedIcon from '@material-ui/icons/GetAppOutlined';
@@ -7,8 +7,14 @@ import GetAppOutlinedIcon from '@material-ui/icons/GetAppOutlined';
 import useStyles from "./styles";
 import Me from '../../images/Me.jpg';
 
-const Hero = () => {
+const Hero = ({scrollToComponent}) => {
     const classes = useStyles();
+    const downloadCV = () => {
+    FileSaver.saveAs(
+        process.env.PUBLIC_URL + "assets/resume.pdf",
+        "Banguilan.pdf"
+    )};
+    console.log(process.env.PUBLIC_URL);
     return (
         <Container data-aos="fade-up" className={classes.hero}>
             <Grid container spacing={3} justify="center" alignItems="center">
@@ -23,8 +29,8 @@ const Hero = () => {
                         5th year student 🎓 | Night Owl 🌃
                     </Typography>
                     <div className={classes.buttonGroup}>
-                        <Button startIcon={<EmailOutlinedIcon />} variant="outlined" className={classes.button1} size="large">Contact Me</Button>
-                        <Button startIcon={<GetAppOutlinedIcon />} variant="outlined" border={1} className={classes.button2} size="large">Download CV</Button>
+                        <Button startIcon={<EmailOutlinedIcon />} variant="outlined" className={classes.button1} size="large" onClick={scrollToComponent}>Contact Me</Button>
+                        <Button startIcon={<GetAppOutlinedIcon />} variant="outlined" border={1} className={classes.button2} size="large" onClick={downloadCV}>Download CV</Button>
                     </div>
                 </Grid>
                 <Grid data-aos="fade-left" item container xs={12} sm={4} justify="flex-end" alignItems="flex-end">
