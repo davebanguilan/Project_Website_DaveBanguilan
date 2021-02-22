@@ -50,6 +50,9 @@ export default makeStyles((theme) => ({
   },
   button: {
     margin: "8px",
+  },
+  requiredLabel: {
+    color: "#f44336"
   }
 
 }));
