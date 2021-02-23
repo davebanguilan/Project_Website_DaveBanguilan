@@ -75,7 +75,7 @@ const Contact = ({scrollDiv}) => {
                         <Paper className={classes.paper}>
                             <FormProvider {...methods}>
                                 <form autoComplete="off" className={`${classes.root} ${classes.form}`}  onSubmit={handleSubmit(onSubmit)} method="post">
-                                    <FormInput name="name" label="Name" variant="outlined" autofocus={true}  errorobj={errors} />
+                                    <FormInput name="name" label="Name" variant="outlined" errorobj={errors} />
                                     <FormInput name="email" label="Email" variant="outlined" errorobj={errors} />
                                     <FormInput name="subject" label="Subject" variant="outlined" errorobj={errors} />
                                     <FormInput name="message" multiline rows={5} label="Message" variant="outlined" errorobj={errors} />

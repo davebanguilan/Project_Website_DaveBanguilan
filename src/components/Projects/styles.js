@@ -21,7 +21,21 @@ export default makeStyles((theme) => ({
     fontWeight: 600,
   },
   container: {
-    margin: "20px 0"
-  }
+    margin: "20px 0",
+  },
+  indivGrid: {
+    padding: "10px"
+  },
+  [theme.breakpoints.down("sm")]: {
+    projects: {
+      padding: "0px",
+    },
+    container: {
+      justifyContent: "center"
+    },
+    indivGrid: {
+      padding: "10px 0"
+    },
+  },
 
 }));

@@ -5,12 +5,17 @@ import useStyles from "./styles";
 const Skill = ({icon, title}) => {
     const classes = useStyles();
     return (
-        <Grid item xs={6} sm={4} justify="center">
-            <Grid container alignItems="center">
-                <i className={`${icon} colored`} style={{fontSize: "70px"}}></i>
-                <Typography className={classes.iconTitle} variant="h5">{title}</Typography>
-            </Grid>
-        </Grid>
+        // <Grid item xs={6} sm={4} justify="center">
+        //     <Grid container alignItems="center">
+        //         <i className={`${icon} colored`} style={{fontSize: "70px"}}></i>
+        //         <Typography className={classes.iconTitle} variant="h5">{title}</Typography>
+        //     </Grid>
+        // </Grid>
+
+        <>
+            <i className={`${icon} colored`} style={{fontSize: "70px"}}></i>
+            <Typography className={classes.iconTitle} variant="h5">{title}</Typography>
+        </>
     )
 }
 

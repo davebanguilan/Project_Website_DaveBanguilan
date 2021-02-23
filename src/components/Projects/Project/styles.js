@@ -53,5 +53,7 @@ export default makeStyles((theme) => ({
       backgroundColor: "#0000FF",
     }
   },
+  [theme.breakpoints.down("sm")]: {
+  },
 
 }));

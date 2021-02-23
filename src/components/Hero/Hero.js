@@ -7,6 +7,7 @@ import GetAppOutlinedIcon from '@material-ui/icons/GetAppOutlined';
 import useStyles from "./styles";
 import Me from '../../images/Me.jpg';
 
+
 const Hero = ({scrollToComponent}) => {
     const classes = useStyles();
     const downloadCV = () => {
@@ -14,11 +15,11 @@ const Hero = ({scrollToComponent}) => {
         process.env.PUBLIC_URL + "assets/resume.pdf",
         "Banguilan.pdf"
     )};
-    console.log(process.env.PUBLIC_URL);
     return (
-        <Container data-aos="fade-up" className={classes.hero}>
-            <Grid container spacing={3} justify="center" alignItems="center">
-                <Grid data-aos="fade-right" item xs={12} sm={8} justify="center">
+
+        <Container className={classes.hero}>
+            <Grid data-aos="fade-up" container spacing={3} justify="center" alignItems="center">
+                <Grid className={classes.detailsContainer} data-aos="fade-right" item xs={12} sm={8} >
                     <Typography variant="h4">
                         <span variant="h4" className={classes.primaryColor}>Hey there,</span> I'm Dave Banguilan
                     </Typography>
@@ -33,7 +34,7 @@ const Hero = ({scrollToComponent}) => {
                         <Button startIcon={<GetAppOutlinedIcon />} variant="outlined" border={1} className={classes.button2} size="large" onClick={downloadCV}>Download CV</Button>
                     </div>
                 </Grid>
-                <Grid data-aos="fade-left" item container xs={12} sm={4} justify="flex-end" alignItems="flex-end">
+                <Grid className={classes.imgContainer} data-aos="fade-left" item container xs={12} sm={4} justify="flex-end" >
                     <img className={classes.imgAvatar} src={Me} alt="Dave Banguilan"/>
                 </Grid>
             </Grid>

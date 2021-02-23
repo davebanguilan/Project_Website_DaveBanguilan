@@ -29,4 +29,16 @@ export default makeStyles((theme) => ({
     margin: "0 5px",
     color: "#323232",
   },
+  [theme.breakpoints.down("sm")]: {
+    skills: {
+      padding: "0px",
+    },
+    skill: {
+      margin: "20px 0",
+      '& > .MuiGrid-item': {
+        padding: "5px",
+      },
+    }
+    
+  },
 }));

@@ -7,18 +7,18 @@ const Skills = () => {
     const classes = useStyles();
 
     const skills = [
-        {icon: "devicon-html5-plain", title: "HTML"},
-        {icon: "devicon-css3-plain", title: "CSS"},
-        {icon: "devicon-javascript-plain", title: "JavaScript"},
-        {icon: "devicon-bootstrap-plain", title: "Bootstrap"},
-        {icon: "devicon-mongodb-plain", title: "MongoDB"},
-        {icon: "devicon-express-original", title: "ExpressJS"},
-        {icon: "devicon-react-original", title: "ReactJS"},
-        {icon: "devicon-nodejs-plain", title: "NodeJS"},
-        {icon: "devicon-materialui-plain", title: "Material-UI"},
-        {icon: "devicon-csharp-plain", title: "C#"},
-        {icon: "devicon-dot-net-plain", title: ".NET"},
-        {icon: "devicon-microsoftsqlserver-plain", title: "MS SQL"},
+        {id: 1, icon: "devicon-html5-plain", title: "HTML"},
+        {id: 2, icon: "devicon-css3-plain", title: "CSS"},
+        {id: 3, icon: "devicon-javascript-plain", title: "JavaScript"},
+        {id: 4, icon: "devicon-bootstrap-plain", title: "Bootstrap"},
+        {id: 5, icon: "devicon-mongodb-plain", title: "MongoDB"},
+        {id: 6, icon: "devicon-express-original", title: "ExpressJS"},
+        {id: 7, icon: "devicon-react-original", title: "ReactJS"},
+        {id: 8, icon: "devicon-nodejs-plain", title: "NodeJS"},
+        {id: 9, icon: "devicon-materialui-plain", title: "Material-UI"},
+        {id: 10, icon: "devicon-csharp-plain", title: "C#"},
+        {id: 11, icon: "devicon-dot-net-plain", title: ".NET"},
+        {id: 12, icon: "devicon-microsoftsqlserver-plain", title: "MS SQL"},
     ];
 
     return (
@@ -30,8 +30,13 @@ const Skills = () => {
                 <Typography className={classes.textColor} variant="h5">Programming Languages / Frameworks</Typography>
             </Grid>
 
-            <Grid data-aos="fade-down" container className={classes.skill} spacing={3} justify="center" alignItems="center">
-                {skills.map((skill) => <Skill data-aos="fade-down" icon={skill.icon} title={skill.title} />)}
+            <Grid container className={classes.skill} spacing={3} justify="center" alignItems="center">
+                {skills.map((skill) => 
+                    <Grid data-aos="fade-down" key={skill.id} item xs={6} sm={4}>
+                        <Grid container alignItems="center">
+                            <Skill data-aos="fade-down" icon={skill.icon} title={skill.title} />
+                        </Grid>
+                </Grid>)}
             </Grid>
         </Container>
     )

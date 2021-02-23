@@ -10,9 +10,10 @@ const Project = ({imageSrc, description, title, altText, techs, githubLink, depl
         if (newWindow) newWindow.opener = null
       }
     return (
-        <Grid item xs={12} sm={6} justify="center">
-            <Grid container alignItems="center">
-                <Card className={classes.card}>
+        // <Grid className={classes.myProjects} item xs={12} sm={6} justify="center">
+            
+        // </Grid>
+        <Card className={classes.card}>
                     <CardMedia className={classes.media} 
                         component="img"
                         alt={altText}
@@ -26,12 +27,12 @@ const Project = ({imageSrc, description, title, altText, techs, githubLink, depl
                         <Typography className={classes.description} color="textSecondary" variant="h6" gutterBottom>
                             {description}
                         </Typography>
-                        <Grid className={classes.stacks} spacing={2} alignItems="center">
+                        <Grid className={classes.stacks}>
                             <Grid container alignItems="center" >
                                 <Typography variant="h6" component="p">
                                     Frameworks used:
                                 </Typography>
-                                {techs.map((tech) => (<i className={`${tech} colored`} style={{fontSize: "25px", margin: "0 3px"}}></i>))}
+                                {techs.map((tech) => (<i key={tech.id} className={`${tech.icon} colored`} title={tech.iconText} style={{fontSize: "25px", margin: "0 3px"}}></i>))}
                             </Grid>
                         </Grid>
                     </CardContent>
@@ -40,8 +41,6 @@ const Project = ({imageSrc, description, title, altText, techs, githubLink, depl
                             <Button className={classes.site} startIcon={<LanguageOutlinedIcon />} size="small" color="primary" onClick={() => openInNewTab(deployedSite)}>Deployed Site</Button>
                     </CardActions>
                 </Card>
-            </Grid>
-        </Grid>
 
     )
 }

@@ -9,5 +9,9 @@ export default makeStyles((theme) => ({
   iconTitle: {
     margin: "0 10px",
     color: "#323232",
-  }
+  },
+  [theme.breakpoints.down("sm")]: {
+    
+  },
+
 }));

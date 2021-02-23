@@ -35,8 +35,8 @@ export default makeStyles((theme) => ({
   },
   container: {
     margin: "20px 0"
-  }
-  ,paper: {
+  },
+  paper: {
     padding: theme.spacing(2),
     border: '1px solid #F8F8F8',
     background: "#F8F8F8",
@@ -53,6 +53,14 @@ export default makeStyles((theme) => ({
   },
   requiredLabel: {
     color: "#f44336"
-  }
-
+  },
+  [theme.breakpoints.down("sm")]: {
+    contact: {
+      padding: "0px",
+    },
+    paper: {
+      padding: theme.spacing(1),
+    },
+    
+  },
 }));

@@ -4,15 +4,16 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import {Container} from '@material-ui/core';
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
+import CssBaseline from '@material-ui/core/CssBaseline';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const theme = createMuiTheme({
+const theme = responsiveFontSizes(createMuiTheme({
   typography: {
     fontFamily: "Ubuntu, sans-serif"
   }
-});
+}));
 
 const App = () => {
   const scrollDiv = createRef();
@@ -29,7 +30,8 @@ const App = () => {
 
     return (
         <MuiThemeProvider theme={theme}>
-            <Container  maxWidth="md" >
+            <CssBaseline />
+            <Container  maxWidth="md" justify="center">
                 <Hero scrollToComponent={scrollToComponent} />
                 <Skills />
                 <Projects />
