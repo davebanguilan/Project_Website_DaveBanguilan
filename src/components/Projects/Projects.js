@@ -6,6 +6,7 @@ import WeatherApp from '../../images/weatherapp.jpg';
 import StackApp from '../../images/stackapp.jpg';
 import EcommerceApp from '../../images/ecommerceapp.jpg';
 import ChatApp from '../../images/chatapp.jpg';
+import BugApp from '../../images/bugtrackerapp.jpg'
 import useStyles from "./styles";
 
 
@@ -13,14 +14,14 @@ const Projects = () => {
     const classes = useStyles();
     const myProjects= [
 
-        // {   id: 4,
-        //     imageSrc: EcommerceApp, 
-        //     description: "This ecommerce store is created using React for the frontend, Flexible eCommerce APIs for any frontend framework, CMS or PWA. Developer-first, API-first, headless eCommerce infrastructure for growing businesses.",
-        //     title:"Ecommerce", 
-        //     altText:"Ecommerce",
-        //     techs: [{id: 1, icon: "devicon-react-original", iconText:"React"}], 
-        //     githubLink: "https://github.com/davebanguilan/Project_Website_ECommerce",
-        //     deployedSite: "https://davebanguilan-ecommerce.netlify.app/" },
+        {   id: 5,
+            imageSrc: BugApp, 
+            description: "This Bug Tracker app is created with MERN stack. A bug tracking system ensures bugs are detected and fixed. It helps get rid of issues in the software by regulating the work of each team member.",
+            title:"Bug Tracker", 
+            altText:"Bug Tracker",
+            techs: [{id: 1, icon: "devicon-mongodb-plain", iconText:"MongoDB"},{id: 2, icon: "devicon-express-original", iconText:"ExpressJS"} , {id: 3, icon: "devicon-react-original", iconText:"React"}, {id: 4, icon: "devicon-nodejs-plain", iconText:"NodeJS"} , {id: 5, icon: "devicon-materialui-plain", iconText:"MaterialUI"}, {id: 6, icon: "devicon-redux-original", iconText:"Redux"}],
+            githubLink: "https://github.com/davebanguilan/Project_Website_BugTracker_FE",
+            deployedSite: "https://davebanguilan-bugtracker.netlify.app/" },
         {   id: 4,
             imageSrc: StackApp, 
             description: "Stack is a mini social media web application where you can upload post a stack(picture with description). The application has two login options: Manual login (JWT-token based) and a Google OAuthentication.",
